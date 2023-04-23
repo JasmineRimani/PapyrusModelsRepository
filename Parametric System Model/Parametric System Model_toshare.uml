@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_KUaDsJC5Ee2sKN61Pkjalg" name="Parametric System Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_KVpZ0JC5Ee2sKN61Pkjalg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lH-pMOBgEe2FHK-mnHrCgg" name="GeneralExplorationSystem">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_8Fpe0OBgEe2FHK-mnHrCgg">
+      <body>General Package Model for &#xD;
+an exploration system &#xD;
+(e.g. rover, lander, hopper)&#xD;
+</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Package" xmi:id="_M5xjcJC5Ee2sKN61Pkjalg" name="Functional Architecture">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_F5CEcOBhEe2FHK-mnHrCgg">
+        <body>Functions and operations &#xD;
+of the studied system.</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gl760OAzEe2FHK-mnHrCgg" name="Views">
+        <packagedElement xmi:type="uml:Package" xmi:id="_FlVFIOA8Ee2FHK-mnHrCgg" name="UseCases"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_IoDPQOA8Ee2FHK-mnHrCgg" name="ActivityDiagrams"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_lzAcoOAzEe2FHK-mnHrCgg" name="Scenario">
+        <packagedElement xmi:type="uml:Activity" xmi:id="_UoPOgJC6Ee2sKN61Pkjalg" name="ExplorationScenario" node="_z97mkJDcEe2sKN61Pkjalg _2bozkJDmEe2sKN61Pkjalg _aOXaoJDoEe2sKN61Pkjalg _hN4VAJDpEe2sKN61Pkjalg _pjU9AJDpEe2sKN61Pkjalg _xkEgUJDpEe2sKN61Pkjalg _0FJ9AJDpEe2sKN61Pkjalg _b-zrQJDtEe2sKN61Pkjalg _PitSwJD0Ee2sKN61Pkjalg">
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_mkWOwJC6Ee2sKN61Pkjalg" name="Mobility Subsystem" node="_AFP9sJDdEe2sKN61Pkjalg _77lRQJDqEe2sKN61Pkjalg">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_dCpOMJDqEe2sKN61Pkjalg" target="_77lRQJDqEe2sKN61Pkjalg" source="_AFP9sJDdEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_DGFwIJDrEe2sKN61Pkjalg" name="No" target="_hN4VAJDpEe2sKN61Pkjalg" source="_77lRQJDqEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_Lnsk0JDrEe2sKN61Pkjalg" name="Yes (Remove Waypoint)" target="_y1hBcJDmEe2sKN61Pkjalg" source="_77lRQJDqEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_AFP9sJDdEe2sKN61Pkjalg" name="Navigate to Goal" incoming="_q9o0UJDoEe2sKN61Pkjalg" outgoing="_dCpOMJDqEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:DecisionNode" xmi:id="_77lRQJDqEe2sKN61Pkjalg" name="Not rechable site?" incoming="_dCpOMJDqEe2sKN61Pkjalg" outgoing="_DGFwIJDrEe2sKN61Pkjalg _Lnsk0JDrEe2sKN61Pkjalg"/>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_Dr8NAJDcEe2sKN61Pkjalg" name="Payload" node="_0TrTcJDkEe2sKN61Pkjalg _ynh6sJDkEe2sKN61Pkjalg">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_u2JsEJDqEe2sKN61Pkjalg" target="_pjU9AJDpEe2sKN61Pkjalg" source="_ynh6sJDkEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_F10AkJD9Ee2sKN61Pkjalg" target="_y1hBcJDmEe2sKN61Pkjalg" source="_0TrTcJDkEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_ynh6sJDkEe2sKN61Pkjalg" name="Observe Target" incoming="_qEqTAJDqEe2sKN61Pkjalg" outgoing="_u2JsEJDqEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_0TrTcJDkEe2sKN61Pkjalg" name="Sample Target" incoming="_ypI1gJDqEe2sKN61Pkjalg" outgoing="_F10AkJD9Ee2sKN61Pkjalg"/>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_GrBNQJDcEe2sKN61Pkjalg" name="Power Subsystem" node="_3-Qu0JDkEe2sKN61Pkjalg">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_Bqam4JDsEe2sKN61Pkjalg" target="_v28-kJDmEe2sKN61Pkjalg" source="_3-Qu0JDkEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_3-Qu0JDkEe2sKN61Pkjalg" name="Recharge Batteries" incoming="_3fK64JDrEe2sKN61Pkjalg" outgoing="_Bqam4JDsEe2sKN61Pkjalg"/>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_e5e8YJDcEe2sKN61Pkjalg" name="Communication Subsystem" node="_6e_mMJDkEe2sKN61Pkjalg">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_DgMcwJDsEe2sKN61Pkjalg" target="_v28-kJDmEe2sKN61Pkjalg" source="_6e_mMJDkEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_6e_mMJDkEe2sKN61Pkjalg" name="Communicate Data" incoming="_8v3_gJDrEe2sKN61Pkjalg" outgoing="_DgMcwJDsEe2sKN61Pkjalg"/>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_mAX7AJDmEe2sKN61Pkjalg" name="Planning and Scheduling Module" node="_NBbBwJD0Ee2sKN61Pkjalg _s5e08JDzEe2sKN61Pkjalg _CA7JwJDpEe2sKN61Pkjalg _C7VZAJDoEe2sKN61Pkjalg _bTHRoJDnEe2sKN61Pkjalg _y1hBcJDmEe2sKN61Pkjalg _v28-kJDmEe2sKN61Pkjalg">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_gTzkUJDnEe2sKN61Pkjalg" target="_bTHRoJDnEe2sKN61Pkjalg" source="_y1hBcJDmEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_iJq5wJDnEe2sKN61Pkjalg" name="Yes" target="_v28-kJDmEe2sKN61Pkjalg" source="_bTHRoJDnEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_o4VKIJDnEe2sKN61Pkjalg" name="No (Plan completed)" target="_CA7JwJDpEe2sKN61Pkjalg" source="_bTHRoJDnEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_ES2lkJDoEe2sKN61Pkjalg" target="_C7VZAJDoEe2sKN61Pkjalg" source="_v28-kJDmEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_9zC-oJDpEe2sKN61Pkjalg" name="No" target="_xkEgUJDpEe2sKN61Pkjalg" source="_C7VZAJDoEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_DYyfIJDqEe2sKN61Pkjalg" name="Yes" target="_aOXaoJDoEe2sKN61Pkjalg" source="_C7VZAJDoEe2sKN61Pkjalg"/>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_OOAJoJD0Ee2sKN61Pkjalg" target="_NBbBwJD0Ee2sKN61Pkjalg" source="_s5e08JDzEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_v28-kJDmEe2sKN61Pkjalg" name="Check Resources" incoming="_iJq5wJDnEe2sKN61Pkjalg _Bqam4JDsEe2sKN61Pkjalg _DgMcwJDsEe2sKN61Pkjalg" outgoing="_ES2lkJDoEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_y1hBcJDmEe2sKN61Pkjalg" name="Check Goals" incoming="__6eskJDmEe2sKN61Pkjalg _Lnsk0JDrEe2sKN61Pkjalg _F10AkJD9Ee2sKN61Pkjalg" outgoing="_gTzkUJDnEe2sKN61Pkjalg">
+              <inputValue xmi:type="uml:InputPin" xmi:id="_9C9F0ZDmEe2sKN61Pkjalg" incoming="_9C9F0JDmEe2sKN61Pkjalg">
+                <upperBound xmi:type="uml:LiteralInteger" xmi:id="_9C9F0pDmEe2sKN61Pkjalg" value="1"/>
+              </inputValue>
+            </node>
+            <node xmi:type="uml:DecisionNode" xmi:id="_bTHRoJDnEe2sKN61Pkjalg" name="Do you have more mission goals?" incoming="_gTzkUJDnEe2sKN61Pkjalg _CMMo0JDtEe2sKN61Pkjalg" outgoing="_iJq5wJDnEe2sKN61Pkjalg _o4VKIJDnEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:DecisionNode" xmi:id="_C7VZAJDoEe2sKN61Pkjalg" name="Do we have enough resources?" incoming="_ES2lkJDoEe2sKN61Pkjalg" outgoing="_9zC-oJDpEe2sKN61Pkjalg _DYyfIJDqEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_CA7JwJDpEe2sKN61Pkjalg" name="" incoming="_o4VKIJDnEe2sKN61Pkjalg"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_s5e08JDzEe2sKN61Pkjalg" name="Wait Instructions" incoming="_AXH5YJD0Ee2sKN61Pkjalg" outgoing="_OOAJoJD0Ee2sKN61Pkjalg"/>
+            <node xmi:type="uml:FlowFinalNode" xmi:id="_NBbBwJD0Ee2sKN61Pkjalg" name="" incoming="_OOAJoJD0Ee2sKN61Pkjalg"/>
+          </ownedBehavior>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_9C9F0JDmEe2sKN61Pkjalg" target="_9C9F0ZDmEe2sKN61Pkjalg" source="_2bozkJDmEe2sKN61Pkjalg">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_9DG20JDmEe2sKN61Pkjalg" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_9DG20ZDmEe2sKN61Pkjalg" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="__6eskJDmEe2sKN61Pkjalg" target="_y1hBcJDmEe2sKN61Pkjalg" source="_z97mkJDcEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_q9o0UJDoEe2sKN61Pkjalg" name="No" target="_AFP9sJDdEe2sKN61Pkjalg" source="_aOXaoJDoEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_heo4YJDqEe2sKN61Pkjalg" name="Yes" target="_pjU9AJDpEe2sKN61Pkjalg" source="_hN4VAJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_qEqTAJDqEe2sKN61Pkjalg" name="No" target="_ynh6sJDkEe2sKN61Pkjalg" source="_hN4VAJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_ypI1gJDqEe2sKN61Pkjalg" name="Yes" target="_0TrTcJDkEe2sKN61Pkjalg" source="_pjU9AJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_3fK64JDrEe2sKN61Pkjalg" name="Yes" target="_3-Qu0JDkEe2sKN61Pkjalg" source="_xkEgUJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_5eiKkJDrEe2sKN61Pkjalg" name="No" target="_0FJ9AJDpEe2sKN61Pkjalg" source="_xkEgUJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_8v3_gJDrEe2sKN61Pkjalg" name="Yes" target="_6e_mMJDkEe2sKN61Pkjalg" source="_0FJ9AJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_CMMo0JDtEe2sKN61Pkjalg" target="_bTHRoJDnEe2sKN61Pkjalg" source="_pjU9AJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_-Uuj0JDzEe2sKN61Pkjalg" target="_b-zrQJDtEe2sKN61Pkjalg" source="_0FJ9AJDpEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_AXH5YJD0Ee2sKN61Pkjalg" name="No: Contact Control Center" target="_s5e08JDzEe2sKN61Pkjalg" source="_b-zrQJDtEe2sKN61Pkjalg"/>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_TuwccJD0Ee2sKN61Pkjalg" target="_PitSwJD0Ee2sKN61Pkjalg" source="_b-zrQJDtEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:InitialNode" xmi:id="_z97mkJDcEe2sKN61Pkjalg" name="START" outgoing="__6eskJDmEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_2bozkJDmEe2sKN61Pkjalg" name="Mission Goals List" outgoing="_9C9F0JDmEe2sKN61Pkjalg">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_2bozkZDmEe2sKN61Pkjalg" value="1"/>
+          </node>
+          <node xmi:type="uml:DecisionNode" xmi:id="_aOXaoJDoEe2sKN61Pkjalg" name="Are you at the waypoint?" incoming="_DYyfIJDqEe2sKN61Pkjalg" outgoing="_q9o0UJDoEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_hN4VAJDpEe2sKN61Pkjalg" name="Did you Observe?" incoming="_DGFwIJDrEe2sKN61Pkjalg" outgoing="_heo4YJDqEe2sKN61Pkjalg _qEqTAJDqEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_pjU9AJDpEe2sKN61Pkjalg" name="Do you need to sample?" incoming="_heo4YJDqEe2sKN61Pkjalg _u2JsEJDqEe2sKN61Pkjalg" outgoing="_ypI1gJDqEe2sKN61Pkjalg _CMMo0JDtEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_xkEgUJDpEe2sKN61Pkjalg" name="Do we need to Recharge?" incoming="_9zC-oJDpEe2sKN61Pkjalg" outgoing="_3fK64JDrEe2sKN61Pkjalg _5eiKkJDrEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_0FJ9AJDpEe2sKN61Pkjalg" name="Do we need to Communicate?" incoming="_5eiKkJDrEe2sKN61Pkjalg" outgoing="_8v3_gJDrEe2sKN61Pkjalg _-Uuj0JDzEe2sKN61Pkjalg"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_b-zrQJDtEe2sKN61Pkjalg" name="Is it an anomaly?" incoming="_-Uuj0JDzEe2sKN61Pkjalg" outgoing="_AXH5YJD0Ee2sKN61Pkjalg _TuwccJD0Ee2sKN61Pkjalg"/>
+          <node xmi:type="uml:FlowFinalNode" xmi:id="_PitSwJD0Ee2sKN61Pkjalg" name="Abort Mission (contact control center)" incoming="_TuwccJD0Ee2sKN61Pkjalg"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ZNwdQOA8Ee2FHK-mnHrCgg" name="UseCases">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_eFJDQJC5Ee2sKN61Pkjalg" name="Navigate to Goal" subject="_JEA6YJDbEe2sKN61Pkjalg _r_iG8OBMEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_K8YGsOBaEe2FHK-mnHrCgg" client="_AFP9sJDdEe2sKN61Pkjalg" supplier="_eFJDQJC5Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_glPogJC5Ee2sKN61Pkjalg" name="Sample Target" subject="_NScpsJDbEe2sKN61Pkjalg _YwrYoJC8Ee2sKN61Pkjalg _0dSWYOBMEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_ksTokOBaEe2FHK-mnHrCgg" client="_0TrTcJDkEe2sKN61Pkjalg" supplier="_glPogJC5Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_fLtCsJC5Ee2sKN61Pkjalg" name="Observe Target" subject="_NScpsJDbEe2sKN61Pkjalg _YwrYoJC8Ee2sKN61Pkjalg _0dSWYOBMEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_gPHEgOBaEe2FHK-mnHrCgg" client="_ynh6sJDkEe2sKN61Pkjalg" supplier="_fLtCsJC5Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_kqk0QJC7Ee2sKN61Pkjalg" name="Communicate Data" subject="_kkH44JC5Ee2sKN61Pkjalg _JFIKIJDaEe2sKN61Pkjalg _12OfQOBMEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_rsXK8OBaEe2FHK-mnHrCgg" client="_6e_mMJDkEe2sKN61Pkjalg" supplier="_kqk0QJC7Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_nMCEYJC7Ee2sKN61Pkjalg" name="Recharge Batteries" subject="_kkH44JC5Ee2sKN61Pkjalg _RCi3MJDbEe2sKN61Pkjalg _49UzEOBMEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_oxYAgOBaEe2FHK-mnHrCgg" client="_3-Qu0JDkEe2sKN61Pkjalg" supplier="_nMCEYJC7Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_uylmEJC7Ee2sKN61Pkjalg" name="Wait Instructions" subject="_kkH44JC5Ee2sKN61Pkjalg _w8uiYJC7Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_7Fa_oOBaEe2FHK-mnHrCgg" client="_s5e08JDzEe2sKN61Pkjalg" supplier="_uylmEJC7Ee2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_K0q-sJDmEe2sKN61Pkjalg" name="Check Resources" subject="_kkH44JC5Ee2sKN61Pkjalg _THRHAJDmEe2sKN61Pkjalg _L499sOBNEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_wJ34EOBaEe2FHK-mnHrCgg" client="_v28-kJDmEe2sKN61Pkjalg" supplier="_K0q-sJDmEe2sKN61Pkjalg"/>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_m5YNUJDrEe2sKN61Pkjalg" name="Check Goals" subject="_kkH44JC5Ee2sKN61Pkjalg _THRHAJDmEe2sKN61Pkjalg _w8uiYJC7Ee2sKN61Pkjalg _L499sOBNEe2FHK-mnHrCgg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_zppxoOBaEe2FHK-mnHrCgg" client="_y1hBcJDmEe2sKN61Pkjalg" supplier="_m5YNUJDrEe2sKN61Pkjalg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_rcP2YJD9Ee2sKN61Pkjalg" name="Physical Architecture">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_IxCMUOBhEe2FHK-mnHrCgg">
+        <body>Physical elements (actors, components, &#xD;
+systems, subsystems, equipments)&#xD;
+that describe or realize the functional architecture&#xD;
+&#xD;
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_0vWmgOA7Ee2FHK-mnHrCgg" name="Physical Components">
+        <packagedElement xmi:type="uml:Package" xmi:id="_5mdfYOA7Ee2FHK-mnHrCgg" name="Actors">
+          <packagedElement xmi:type="uml:Package" xmi:id="_L9ruUOA8Ee2FHK-mnHrCgg" name="Connections">
+            <packagedElement xmi:type="uml:Association" xmi:id="_pubu4JDrEe2sKN61Pkjalg" memberEnd="_pubu45DrEe2sKN61Pkjalg _puk40JDrEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pubu4ZDrEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pubu4pDrEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_pubu45DrEe2sKN61Pkjalg" name="check goals" type="_m5YNUJDrEe2sKN61Pkjalg" association="_pubu4JDrEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_puk40JDrEe2sKN61Pkjalg" type="_w8uiYJC7Ee2sKN61Pkjalg" association="_pubu4JDrEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_J8QugOBPEe2FHK-mnHrCgg" memberEnd="_J8SjsOBPEe2FHK-mnHrCgg _J8SjseBPEe2FHK-mnHrCgg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_J8R8oOBPEe2FHK-mnHrCgg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_J8R8oeBPEe2FHK-mnHrCgg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_J8SjsOBPEe2FHK-mnHrCgg" name="planning and scheduling module (c&amp;dh)" type="_THRHAJDmEe2sKN61Pkjalg" association="_J8QugOBPEe2FHK-mnHrCgg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_J8SjseBPEe2FHK-mnHrCgg" name="check goals" type="_m5YNUJDrEe2sKN61Pkjalg" association="_J8QugOBPEe2FHK-mnHrCgg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_4yzPgJD3Ee2sKN61Pkjalg" memberEnd="_4zLC8JD3Ee2sKN61Pkjalg _4zNfMJD3Ee2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4zH_oJD3Ee2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4zJNwJD3Ee2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_4zLC8JD3Ee2sKN61Pkjalg" name="planning and scheduling module (c&amp;dh)" type="_THRHAJDmEe2sKN61Pkjalg" association="_4yzPgJD3Ee2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_4zNfMJD3Ee2sKN61Pkjalg" name="check resources" type="_K0q-sJDmEe2sKN61Pkjalg" association="_4yzPgJD3Ee2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_UP-cgJDbEe2sKN61Pkjalg" memberEnd="_UP-cg5DbEe2sKN61Pkjalg _UP-chJDbEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UP-cgZDbEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UP-cgpDbEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_UP-cg5DbEe2sKN61Pkjalg" name="recharge batteries" type="_nMCEYJC7Ee2sKN61Pkjalg" association="_UP-cgJDbEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_UP-chJDbEe2sKN61Pkjalg" name="power subsystem" type="_RCi3MJDbEe2sKN61Pkjalg" association="_UP-cgJDbEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_PfOqUJDbEe2sKN61Pkjalg" memberEnd="_PfYbUpDbEe2sKN61Pkjalg _PfYbU5DbEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PfYbUJDbEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PfYbUZDbEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_PfYbUpDbEe2sKN61Pkjalg" name="observe target" type="_fLtCsJC5Ee2sKN61Pkjalg" association="_PfOqUJDbEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_PfYbU5DbEe2sKN61Pkjalg" name="payload" type="_NScpsJDbEe2sKN61Pkjalg" association="_PfOqUJDbEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_QG9_wJDbEe2sKN61Pkjalg" memberEnd="_QG9_w5DbEe2sKN61Pkjalg _QG9_xJDbEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QG9_wZDbEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QG9_wpDbEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_QG9_w5DbEe2sKN61Pkjalg" name="sample target" type="_glPogJC5Ee2sKN61Pkjalg" association="_QG9_wJDbEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_QG9_xJDbEe2sKN61Pkjalg" name="payload" type="_NScpsJDbEe2sKN61Pkjalg" association="_QG9_wJDbEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_Lev3cJDbEe2sKN61Pkjalg" memberEnd="_Lev3c5DbEe2sKN61Pkjalg _Lev3dJDbEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lev3cZDbEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Lev3cpDbEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_Lev3c5DbEe2sKN61Pkjalg" name="mobility subsystem" type="_JEA6YJDbEe2sKN61Pkjalg" association="_Lev3cJDbEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_Lev3dJDbEe2sKN61Pkjalg" name="navigate to goal" type="_eFJDQJC5Ee2sKN61Pkjalg" association="_Lev3cJDbEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_IrVUoJDbEe2sKN61Pkjalg" memberEnd="_IrVUo5DbEe2sKN61Pkjalg _IrVUpJDbEe2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IrVUoZDbEe2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IrVUopDbEe2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_IrVUo5DbEe2sKN61Pkjalg" name="communicate data" type="_kqk0QJC7Ee2sKN61Pkjalg" association="_IrVUoJDbEe2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_IrVUpJDbEe2sKN61Pkjalg" name="communication subsystem" type="_JFIKIJDaEe2sKN61Pkjalg" association="_IrVUoJDbEe2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_aizdkJC8Ee2sKN61Pkjalg" memberEnd="_aizdk5C8Ee2sKN61Pkjalg _ai0EoJC8Ee2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aizdkZC8Ee2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aizdkpC8Ee2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_aizdk5C8Ee2sKN61Pkjalg" name="observe target" type="_fLtCsJC5Ee2sKN61Pkjalg" association="_aizdkJC8Ee2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_ai0EoJC8Ee2sKN61Pkjalg" name="payload team" type="_YwrYoJC8Ee2sKN61Pkjalg" association="_aizdkJC8Ee2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_bIkdEJC8Ee2sKN61Pkjalg" memberEnd="_bIlEIpC8Ee2sKN61Pkjalg _bIlEI5C8Ee2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bIlEIJC8Ee2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bIlEIZC8Ee2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_bIlEIpC8Ee2sKN61Pkjalg" name="sample target" type="_glPogJC5Ee2sKN61Pkjalg" association="_bIkdEJC8Ee2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_bIlEI5C8Ee2sKN61Pkjalg" name="payload team" type="_YwrYoJC8Ee2sKN61Pkjalg" association="_bIkdEJC8Ee2sKN61Pkjalg"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_Xa7tsJC8Ee2sKN61Pkjalg" memberEnd="_Xa9i4JC8Ee2sKN61Pkjalg _Xa9i4ZC8Ee2sKN61Pkjalg">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xa870JC8Ee2sKN61Pkjalg" source="org.eclipse.papyrus">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xa870ZC8Ee2sKN61Pkjalg" key="nature" value="UML_Nature"/>
+              </eAnnotations>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_Xa9i4JC8Ee2sKN61Pkjalg" name="wait instructions" type="_uylmEJC7Ee2sKN61Pkjalg" association="_Xa7tsJC8Ee2sKN61Pkjalg"/>
+              <ownedEnd xmi:type="uml:Property" xmi:id="_Xa9i4ZC8Ee2sKN61Pkjalg" name="mission team " type="_w8uiYJC7Ee2sKN61Pkjalg" association="_Xa7tsJC8Ee2sKN61Pkjalg"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_THRHAJDmEe2sKN61Pkjalg" name="Planning and Scheduling Module (C&amp;DH)" useCase="_K0q-sJDmEe2sKN61Pkjalg _m5YNUJDrEe2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_YwrYoJC8Ee2sKN61Pkjalg" name="Payload Team" useCase="_glPogJC5Ee2sKN61Pkjalg _fLtCsJC5Ee2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_RCi3MJDbEe2sKN61Pkjalg" name="Power Subsystem" useCase="_nMCEYJC7Ee2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_w8uiYJC7Ee2sKN61Pkjalg" name="Mission Team " useCase="_uylmEJC7Ee2sKN61Pkjalg _m5YNUJDrEe2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_JFIKIJDaEe2sKN61Pkjalg" name="Communication Subsystem" useCase="_kqk0QJC7Ee2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_JEA6YJDbEe2sKN61Pkjalg" name="Mobility Subsystem" useCase="_eFJDQJC5Ee2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Actor" xmi:id="_NScpsJDbEe2sKN61Pkjalg" name="Payload" useCase="_glPogJC5Ee2sKN61Pkjalg _fLtCsJC5Ee2sKN61Pkjalg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_2da1YOA8Ee2FHK-mnHrCgg" name="System">
+          <packagedElement xmi:type="uml:Class" xmi:id="_kkH44JC5Ee2sKN61Pkjalg" name="Exploration System" useCase="_kqk0QJC7Ee2sKN61Pkjalg _nMCEYJC7Ee2sKN61Pkjalg _uylmEJC7Ee2sKN61Pkjalg _K0q-sJDmEe2sKN61Pkjalg _m5YNUJDrEe2sKN61Pkjalg"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_kMjYMOBfEe2FHK-mnHrCgg" name="Generic Rover">
+            <generalization xmi:type="uml:Generalization" xmi:id="_tHddsOBfEe2FHK-mnHrCgg" general="_kkH44JC5Ee2sKN61Pkjalg"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_6vcrQOA8Ee2FHK-mnHrCgg" name="Subsystems" URI="">
+              <packagedElement xmi:type="uml:Package" xmi:id="_AoJwwOBNEe2FHK-mnHrCgg" name="Mobility">
+                <packagedElement xmi:type="uml:Component" xmi:id="_r_iG8OBMEe2FHK-mnHrCgg" name="Mobility Subsystem" useCase="_eFJDQJC5Ee2sKN61Pkjalg" isActive="true">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_txRzkOBbEe2FHK-mnHrCgg" general="_JEA6YJDbEe2sKN61Pkjalg">
+                    <ownedComment xmi:type="uml:Comment" xmi:id="_JaUEwOBfEe2FHK-mnHrCgg">
+                      <body>A generalization is a taxonomic relationship between a more general classifier and a more specific classifier. &#xD;
+Each instance of the specific classifier is also an indirect instance of the general classifier. &#xD;
+Thus, the specific classifier inherits the features of the more general classifier.&#xD;
+(Ref: https://docs.nomagic.com/display/MD190/Generalization)&#xD;
+&#xD;
+</body>
+                    </ownedComment>
+                  </generalization>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_6r5eoOBVEe2FHK-mnHrCgg" name="time" type="_lXF08JHMEe2sKN61Pkjalg" isUnique="false">
+                    <defaultValue xmi:type="uml:Expression" xmi:id="_FuQY0OBWEe2FHK-mnHrCgg" name="time_mobility" type="_lXF08JHMEe2sKN61Pkjalg">
+                      <operand xmi:type="uml:Expression" xmi:id="_CgHJMOBTEe2FHK-mnHrCgg" name="distance/velocity" symbol="">
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_CgHJMeBTEe2FHK-mnHrCgg" name="velocity [m/s]" value="0.1"/>
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_CgHJMuBTEe2FHK-mnHrCgg" name="distance [m]" value="1.0">
+                          <ownedComment xmi:type="uml:Comment" xmi:id="_4XizMOBREe2FHK-mnHrCgg">
+                            <body>The distance to be covered will depend on the analysed map. For now the value is initialized to 1 m.&#xD;
+</body>
+                          </ownedComment>
+                        </operand>
+                      </operand>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_UGVRoOBWEe2FHK-mnHrCgg" name="data" type="_o0jaUJHMEe2sKN61Pkjalg">
+                    <defaultValue xmi:type="uml:Expression" xmi:id="_c0t-EOBWEe2FHK-mnHrCgg" name="data_mobility [Kbytes]" type="_o0jaUJHMEe2sKN61Pkjalg">
+                      <operand xmi:type="uml:Expression" xmi:id="_a5BNweBTEe2FHK-mnHrCgg" name="time*navigation_data" type="_o0jaUJHMEe2sKN61Pkjalg" symbol="">
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_a5BNwuBTEe2FHK-mnHrCgg" name="navigation_data [Kbytes/s]" value="230.0"/>
+                        <operand xmi:type="uml:Expression" xmi:id="_L9hiAOBXEe2FHK-mnHrCgg" name="time [s]" type="_lXF08JHMEe2sKN61Pkjalg">
+                          <operand xmi:type="uml:Expression" xmi:id="_L9hiAeBXEe2FHK-mnHrCgg" name="distance/velocity" symbol="">
+                            <operand xmi:type="uml:LiteralReal" xmi:id="_L9hiAuBXEe2FHK-mnHrCgg" name="velocity [m/s]" value="0.1"/>
+                            <operand xmi:type="uml:LiteralReal" xmi:id="_L9hiA-BXEe2FHK-mnHrCgg" name="distance [m]" value="1.0">
+                              <ownedComment xmi:type="uml:Comment" xmi:id="_L9hiBOBXEe2FHK-mnHrCgg">
+                                <body>The distance to be covered will depend on the analysed map. For now the value is initialized to 1 m.&#xD;
+</body>
+                              </ownedComment>
+                            </operand>
+                          </operand>
+                        </operand>
+                      </operand>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_RxRpUOBXEe2FHK-mnHrCgg" name="power " type="_CGnUcJHNEe2sKN61Pkjalg">
+                    <defaultValue xmi:type="uml:Expression" xmi:id="_hT8tAOBXEe2FHK-mnHrCgg" name="battery_consumption [Ah]" type="_CGnUcJHNEe2sKN61Pkjalg">
+                      <operand xmi:type="uml:Expression" xmi:id="_PbRGIOBVEe2FHK-mnHrCgg" name=" initial_upper_battery_capacity - total_upper_battery_capacity/upper_battery_navigation_autonomy*time/3600" symbol="">
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_PbRGIeBVEe2FHK-mnHrCgg" name="initial_upper_battery_capacity [Ah]" value="15.0">
+                          <ownedComment xmi:type="uml:Comment" xmi:id="_UgWpQOBYEe2FHK-mnHrCgg">
+                            <body>Depends on the simulation. For now the value is initialized to the maximum value&#xD;
+</body>
+                          </ownedComment>
+                        </operand>
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_PbRGIuBVEe2FHK-mnHrCgg" name="total_upper_battery_capacity [Ah]" value="15.0"/>
+                        <operand xmi:type="uml:LiteralReal" xmi:id="_eq8VUOBVEe2FHK-mnHrCgg" name="upper_battery_navigation_autonomy [h]" value="3.0"/>
+                        <operand xmi:type="uml:Expression" xmi:id="_kxo74OBXEe2FHK-mnHrCgg" name="time [s]" type="_lXF08JHMEe2sKN61Pkjalg">
+                          <operand xmi:type="uml:Expression" xmi:id="_kxo74eBXEe2FHK-mnHrCgg" name="distance/velocity" symbol="">
+                            <operand xmi:type="uml:LiteralReal" xmi:id="_kxo74uBXEe2FHK-mnHrCgg" name="velocity [m/s]" value="0.1"/>
+                            <operand xmi:type="uml:LiteralReal" xmi:id="_kxo74-BXEe2FHK-mnHrCgg" name="distance [m]" value="1.0">
+                              <ownedComment xmi:type="uml:Comment" xmi:id="_kxo75OBXEe2FHK-mnHrCgg">
+                                <body>The distance to be covered will depend on the analysed map. For now the value is initialized to 1 m.&#xD;
+</body>
+                              </ownedComment>
+                            </operand>
+                          </operand>
+                        </operand>
+                      </operand>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <packagedElement xmi:type="uml:Realization" xmi:id="_MjKo4OBbEe2FHK-mnHrCgg" client="_r_iG8OBMEe2FHK-mnHrCgg" supplier="_mkWOwJC6Ee2sKN61Pkjalg">
+                    <ownedComment xmi:type="uml:Comment" xmi:id="_8Y410OBeEe2FHK-mnHrCgg">
+                      <body>In a &quot;realization&quot; relationship the client supports at least all of the operations defined in the supplier (the one at the arrowhead) (ref: https://docs.nomagic.com/display/MD190/Realization)&#xD;
+</body>
+                    </ownedComment>
+                  </packagedElement>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_C2LukOBNEe2FHK-mnHrCgg" name="Payload">
+                <packagedElement xmi:type="uml:Component" xmi:id="_0dSWYOBMEe2FHK-mnHrCgg" name="Payload" useCase="_glPogJC5Ee2sKN61Pkjalg _fLtCsJC5Ee2sKN61Pkjalg">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_xn8jIOBbEe2FHK-mnHrCgg" general="_NScpsJDbEe2sKN61Pkjalg"/>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_E3OZQOBNEe2FHK-mnHrCgg" name="C&amp;DH">
+                <packagedElement xmi:type="uml:Component" xmi:id="_66AiMOBMEe2FHK-mnHrCgg" name="Primary OBC"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_IlrA8OBNEe2FHK-mnHrCgg" name="GNC OBC"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_L499sOBNEe2FHK-mnHrCgg" name="Planning&amp;Scheduling OBC" useCase="_K0q-sJDmEe2sKN61Pkjalg _m5YNUJDrEe2sKN61Pkjalg">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_0H6lgOBbEe2FHK-mnHrCgg" general="_THRHAJDmEe2sKN61Pkjalg"/>
+                  <packagedElement xmi:type="uml:Realization" xmi:id="_SnSHcOBbEe2FHK-mnHrCgg" client="_L499sOBNEe2FHK-mnHrCgg" supplier="_mAX7AJDmEe2sKN61Pkjalg"/>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_OtvycOBNEe2FHK-mnHrCgg" name="Communication Subsystem">
+                <packagedElement xmi:type="uml:Component" xmi:id="_12OfQOBMEe2FHK-mnHrCgg" name="Communication Subsystem" useCase="_kqk0QJC7Ee2sKN61Pkjalg">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_3MhmAOBbEe2FHK-mnHrCgg" general="_JFIKIJDaEe2sKN61Pkjalg"/>
+                  <packagedElement xmi:type="uml:Realization" xmi:id="_V0m_EOBbEe2FHK-mnHrCgg" client="_12OfQOBMEe2FHK-mnHrCgg" supplier="_e5e8YJDcEe2sKN61Pkjalg"/>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_RtlnsOBNEe2FHK-mnHrCgg" name="Power Subsystem">
+                <packagedElement xmi:type="uml:Component" xmi:id="_49UzEOBMEe2FHK-mnHrCgg" name="Power Subsystem" useCase="_nMCEYJC7Ee2sKN61Pkjalg">
+                  <packagedElement xmi:type="uml:Realization" xmi:id="_ZdHW0OBbEe2FHK-mnHrCgg" client="_49UzEOBMEe2FHK-mnHrCgg" supplier="_GrBNQJDcEe2sKN61Pkjalg"/>
+                </packagedElement>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_3F3swOBNEe2FHK-mnHrCgg" name="Structure&amp;Mechanism">
+                <packagedElement xmi:type="uml:Component" xmi:id="_CTzk0OBOEe2FHK-mnHrCgg" name="Rocker Boogie"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_JWinwOBOEe2FHK-mnHrCgg" name="Chassis"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_YNxhwOBOEe2FHK-mnHrCgg" name="Mast"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Package" xmi:id="_5x0VoOBNEe2FHK-mnHrCgg" name="Thermal Subsystem"/>
+              <packagedElement xmi:type="uml:Package" xmi:id="_AetEYOBOEe2FHK-mnHrCgg" name="GNC">
+                <packagedElement xmi:type="uml:Component" xmi:id="_cwKH0OBOEe2FHK-mnHrCgg" name="Navigation Sensors"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_fJf9wOBOEe2FHK-mnHrCgg" name="Guidance Algorithm"/>
+                <packagedElement xmi:type="uml:Component" xmi:id="_hCSEUOBOEe2FHK-mnHrCgg" name="Controller"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gCqDEOA9Ee2FHK-mnHrCgg" name="Views">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GuMrgOBZEe2FHK-mnHrCgg">
+          <body>For each subsystem or equipment, the engineer can link different properties.&#xD;
+These properties can be numerical entities or mathematical expressions that can be traced back to the related uses cases in the functional architecture.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_sGBMoOBQEe2FHK-mnHrCgg" name="NumericalSpecification"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2bfoIOBPEe2FHK-mnHrCgg" name="Planning Module Software">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VZ80oOBhEe2FHK-mnHrCgg">
+        <body>Instances of &#xD;
+the planning module &#xD;
+</body>
+      </ownedComment>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_QQSPwJHLEe2sKN61Pkjalg" name="Data Classes">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_bFiecOBhEe2FHK-mnHrCgg">
+      <body>Data types used &#xD;
+in the parametric functional &#xD;
+model&#xD;
+</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lXF08JHMEe2sKN61Pkjalg" name="time [s]" isAbstract="true" isActive="true"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_o0jaUJHMEe2sKN61Pkjalg" name="data [Kbytes]"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CGnUcJHNEe2sKN61Pkjalg" name="battery capacity [Ah]"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-ux2gOBbEe2FHK-mnHrCgg" name="PackageStructure">
+    <packagedElement xmi:type="uml:Package" xmi:id="_FNDhgOBcEe2FHK-mnHrCgg" name="Views"/>
+  </packagedElement>
+</uml:Model>
