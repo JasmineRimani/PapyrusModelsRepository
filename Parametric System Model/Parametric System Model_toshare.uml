@@ -3,7 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_KVpZ0JC5Ee2sKN61Pkjalg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_lH-pMOBgEe2FHK-mnHrCgg" name="GeneralExplorationSystem">
+  <packagedElement xmi:type="uml:Package" xmi:id="_lH-pMOBgEe2FHK-mnHrCgg" name="GenericExplorationSystem">
     <ownedComment xmi:type="uml:Comment" xmi:id="_8Fpe0OBgEe2FHK-mnHrCgg">
       <body>General Package Model for &#xD;
 an exploration system &#xD;
