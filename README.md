@@ -1,7 +1,7 @@
 # Papyrus Models Repository
 
 ## Pre-requisites
-To access the content of this repository you should have access to Papyrus (https://www.eclipse.org/papyrus/).
+To access the content of this repository it is suggested to use Papyrus (https://www.eclipse.org/papyrus/).
 
 ## What is in the repository
 This repository contains a simple and commented example of MBSE model for a generic planetary exploration system. 
